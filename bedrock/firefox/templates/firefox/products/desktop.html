@@ -1,0 +1,174 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% extends "firefox/products/product-base.html" %}
+
+{% add_lang_files "firefox/products/desktop" %}
+
+{% block page_title_prefix %}{% endblock %}
+{% block page_title %}{{ _('Fast, private, modern browser for desktop computers | Firefox') }}{% endblock %}
+{% block page_title_suffix %}{% endblock %}
+{% block page_desc %}{{ _('Firefox is a faster, safer and more private browser than ever before — for Windows, Mac, and Linux desktop computers. Download now!') }}{% endblock %}
+{% block page_image %}{{ static('img/firefox/products/desktop/product-desktop-meta.jpg') }}{% endblock %}
+
+{% block body_id %}firefox-product-desktop{% endblock %}
+
+
+{% block product_header_content %}
+  <h1 class="page-title"><span>{{ _('Firefox Browser for Desktop') }}</span></h1>
+  <p class="tagline">{{ _('Get more done — faster with Firefox.') }}</p>
+{% endblock %}
+
+{% block product_header_download %}
+  {{ download_firefox(dom_id='product-header-download', button_color='button-hollow-arrow dark') }}
+{% endblock %}
+
+{% block product_header_image %}
+  <img class="hero-image" src="{{ static('img/firefox/products/desktop/product-desktop-hero.jpg') }}" alt="">
+{% endblock %}
+
+
+{% block features_list %}
+<section id="features" class="section features">
+  <div class="content">
+
+    <h2 class="section-title"><span>{{ _('Features') }}</span></h2>
+
+    <ul class="features-list">
+      <li class="features-list-item">
+        <img class="feature-image" src="{{ static('img/firefox/products/desktop/feature-desktop-speed.jpg') }}" alt="">
+        <h3 class="feature-title">{{ _('Get more done') }}</h3>
+        <div class="feature-desc">
+          <p>
+          {% trans %}
+            Now Firefox is even faster – with 30% quicker start ups and 86% less hang time!
+            That means windows and tabs load quicker for lightweight browsing that doesn’t
+            hog your computer’s memory.
+          {% endtrans %}
+          </p>
+        </div>
+        <p class="cta"><a href="#" class="cta-link">{{ _('Get more done at Firefox speeds') }}</a></p>
+      </li>
+
+      <li class="features-list-item">
+        <img class="feature-image" src="{{ static('img/firefox/products/desktop/feature-desktop-privacy.jpg') }}" alt="">
+        <h3 class="feature-title">{{ _('Get more privacy') }}</h3>
+        <div class="feature-desc">
+          <p>
+          {% trans %}
+            To share or not share, that’s your call with Firefox’s more powerful Private
+            Browsing feature. It automatically blocks trackers and ads that collect your
+            information without permission.
+          {% endtrans %}
+          </p>
+        </div>
+        <p class="cta"><a href="#" class="cta-link">{{ _('See how Firefox Privacy has your back') }}</a></p>
+      </li>
+
+      <li class="features-list-item">
+        <img class="feature-image" src="{{ static('img/firefox/products/desktop/feature-desktop-addons.jpg') }}" alt="">
+        <h3 class="feature-title">{{ _('Get more freedom') }}</h3>
+        <div class="feature-desc">
+          <p>
+          {% trans %}
+            Firefox is more than just a browser. Backed by Mozilla, a nonprofit, we’re the
+            only independent browser that also fights to protect your online privacy and
+            keeps corporate powers in check.
+          {% endtrans %}
+          </p>
+        </div>
+        <p class="cta"><a href="#" class="cta-link">{{ _('Browse independently with Firefox') }}</a></p>
+      </li>
+    </ul>
+
+  </div>
+</section> {#--/#features--#}
+{% endblock %}
+
+
+{% block values %}
+<section id="values" class="section values">
+  <div class="content">
+
+    <div class="cards-container is-three-cards">
+      <section id="private" class="card image-card is-featured">
+        <div class="card-image">
+          <img src="{{ static('img/firefox/hub/value-private.jpg') }}" alt="">
+        </div>
+        <p class="card-label"><strong>{{ _('Private') }}</strong></p>
+        <div class="card-content">
+          <h2 class="card-title">{{ _('More Privacy') }}</h2>
+          <p>
+          {% trans %}
+            Let your freak flag fly… or keep it safely tucked away. Firefox’s
+            powerful privacy tools give you control over your data, so that
+            you can browse, bank, and binge-watch without a care.
+          {% endtrans %}
+          </p>
+          <p class="card-cta"><a href="#" class="cta-link">{{ ('See how Firefox protects your privacy') }}</a></p>
+        </div>
+      </section>
+
+      <section id="modern" class="card">
+        <p class="card-label"><strong>{{ _('Modern') }}</strong></p>
+        <div class="card-content">
+          <h2 class="card-title">{{ _('More Speed') }}</h2>
+          <p>
+          {% trans %}
+            Bring it, Internet! Firefox has spent the last year beefing up our
+            performance, and pushing the web further with new, exclusive features.
+            So go ahead and launch a big project or binge a live panda stream —
+            without missing a beat.
+          {% endtrans %}
+          </p>
+          <p class="card-cta"><a href="#" class="cta-link">{{ _('Check out our browser muscles') }}</a></p>
+        </div>
+      </section>
+
+      <section id="independent" class="card">
+        <p class="card-label"><strong>{{ _('Independent') }}</strong></p>
+        <div class="card-content">
+          <h2 class="card-title">{{ _('More Freedom') }}</h2>
+          <p>
+          {% trans %}
+            Following the pack isn’t really our style; we’d rather lead. Firefox
+            is an independent browser fueled by a non-profit, Mozilla. So when
+            you choose Firefox, you’re helping build a healthy, unrestricted
+            Internet that helps everyone.
+          {% endtrans %}
+          </p>
+          <p class="card-cta"><a href="#" class="cta-link">{{ _('See how it benefits you') }}</a></p>
+        </div>
+      </section>
+    </div> {#--/.cards-container--#}
+
+  </div> {#--/.content--#}
+</section> {#--/#values--#}
+{% endblock %}
+
+
+{% block outro %}
+<aside class="outro">
+  <div class="content">
+
+    <section class="outro-item outro-item-download">
+      <div class="outro-item-detail">
+        <h2>{{ _('Start browsing with Firefox today') }}</h2>
+        <p class="tagline">{{ _('Faster than ever, more secure, and always independent.') }}</p>
+        {{ download_firefox(dom_id='outro-download-firefox', button_color='button-hollow-arrow light') }}
+      </div>
+    </section>
+
+    <section class="outro-item outro-item-newsletter">
+      <div class="outro-item-detail">
+        <h2>{{ _('Hungry for more?') }}</h2>
+        <p class="tagline">{{ _('Get the latest &amp; greatest from Firefox delivered straight to your inbox.') }}</p>
+        {{ email_newsletter_form(include_title=False, spinner_color='#000', button_class='button-hollow light') }}
+      </div>
+    </section>
+
+  </div> {#--/.content--#}
+</aside> {#--/.outro--#}
+{% endblock %}
+
