@@ -24,6 +24,10 @@ $card-padding: 20px;
     }
 }
 
+.card-heading {
+    text-transform: lowercase;
+}
+
 // the copy & cta for a card (not the .card-label)
 .card-content {
     background: #fff;

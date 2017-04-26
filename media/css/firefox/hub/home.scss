@@ -20,7 +20,8 @@
     }
 
     .fx-privacy-link a {
-        color: #0081ad;
+        color: #9c432a;
+        text-decoration: none;
     }
 }
 
@@ -71,9 +72,11 @@
 
     p {
         @include font-size-level2;
+        color: #4a4a4a;
         font-weight: bold;
         line-height: 1.2;
         margin-bottom: 0;
+        text-transform: lowercase;
     }
 }
 
@@ -88,8 +91,14 @@
     padding-top: 20px;
 }
 
-#private.featured-image-card {
-    background-image: url('/media/img/firefox/hub/texture-private.jpg');
+#private {
+    .card-label {
+        color: #5ca3bd;
+    }
+
+    &.featured-image-card {
+        background-image: url('/media/img/firefox/hub/texture-private.jpg');
+    }
 }
 
 #modern.featured-image-card {
