@@ -125,23 +125,17 @@
 }
 
 /* -------------------------------------------------------------------------- */
-// Mobile
+// Sync
 
-#mobile-card {
+#sync-card {
     .card-content-wrapper {
-        background-image: url('/media/img/firefox/hub/mobile-large.jpg');
+        background-image: url('/media/img/firefox/hub/sync.jpg');
         background-size: 100%;
     }
 
     @media #{$mq-tablet} {
         .card-content-wrapper {
-            @include at2x('/media/img/firefox/hub/mobile-large.jpg', 100%, auto);
-        }
-    }
-
-    @media #{$mq-desktop-wide} {
-        .card-content-wrapper {
-            background-image: url('/media/img/firefox/hub/mobile-large-high-res.jpg');
+            @include at2x('/media/img/firefox/hub/sync-large.jpg', 100%, auto);
         }
     }
 }
@@ -162,16 +156,11 @@
 
 @supports (display: grid) {
     @media #{$mq-tablet} {
-        #intro {
-            display: grid;
-            grid-gap: 20px;
-            grid-template: 1fr / 2fr 1fr;
-        }
-
         #download-intro-wrapper {
             align-items: center;
             display: flex;
             justify-content: center;
+            margin: 20px 0;
         }
 
         #features {
@@ -203,6 +192,18 @@
                     grid-area: card-3;
                 }
             }
+        }
+    }
+
+    @media #{$mq-desktop} {
+        #intro {
+            display: grid;
+            grid-gap: 20px;
+            grid-template: 1fr / 3fr 2fr;
+        }
+
+        #download-intro-wrapper {
+            margin: 0;
         }
     }
 }
